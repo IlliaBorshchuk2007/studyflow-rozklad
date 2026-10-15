@@ -93,7 +93,7 @@ ALTER TABLE public.lessons ADD COLUMN IF NOT EXISTS status text NOT NULL DEFAULT
 UPDATE public.lessons SET lesson_date = (date_trunc('week', (now() AT TIME ZONE 'Europe/Kyiv'))::date + (day_of_week - 1))
 WHERE lesson_date IS NULL;
 ALTER TABLE public.lessons ALTER COLUMN lesson_date SET NOT NULL;
-ALTER TABLE public.lessons ADD CONSTRAINT studyflow_lesson_status CHECK (status IN ('scheduled','rescheduled','cancelled'));
+ALTER TABLE public.lessons ADD CONSTRAINT studyflow_lesson_status CHECK (status IN ('scheduled','rescheduled','cancelled','completed'));
 ALTER TABLE public.lessons ADD CONSTRAINT studyflow_lesson_fields CHECK
   (char_length(room)<=120 AND char_length(materials_url)<=500 AND char_length(homework)<=3000);
 CREATE INDEX IF NOT EXISTS lessons_by_date ON public.lessons (lesson_date,starts_at);

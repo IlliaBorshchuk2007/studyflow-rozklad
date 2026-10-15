@@ -11,3 +11,11 @@
 .avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 
 .personal-stats{display:flex;gap:14px;flex-wrap:wrap;margin:11px 0}.personal-stats span{display:flex;flex-direction:column;gap:5px;background:var(--pale);border-radius:10px;padding:10px 14px;font-size:10px;color:var(--muted)}.personal-stats strong{font-size:20px;color:var(--blue)}
+
+/* StudyFlow 2.1: проведені заняття і адаптивні п'ять показників */
+.status-completed{background:#d8f6e8;color:#12764c}
+:root[data-theme='dark'] .status-completed{background:#184737;color:#b4f4d0}
+.metric-grid.metrics-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1320px){.metric-grid.metrics-5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:980px){.metric-grid.metrics-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.metric-grid.metrics-5{grid-template-columns:1fr}}

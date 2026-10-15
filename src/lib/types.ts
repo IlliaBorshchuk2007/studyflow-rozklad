@@ -1,5 +1,5 @@
 export type Role = 'student' | 'teacher' | 'admin';
-export type LessonStatus = 'scheduled' | 'rescheduled' | 'cancelled';
+export type LessonStatus = 'scheduled' | 'rescheduled' | 'cancelled' | 'completed';
 export interface Profile { id:string; full_name:string; role:Role; avatar_url:string|null; created_at?:string; }
 export interface Group { id:string; name:string; description:string; }
 export interface Membership { id:string; group_id:string; user_id:string; member_role:'student'|'teacher'; }
@@ -9,4 +9,4 @@ export interface AuditEntry {id:string;lesson_id:string|null;lesson_title:string
 export interface Notice { id:string;user_id:string;lesson_id:string|null;message:string;created_at:string;read_at:string|null;}
 export interface UserRow {id:string;email:string;full_name:string;role:Role;}
 export const ROLE_LABEL:Record<Role,string>={student:'Студент',teacher:'Викладач',admin:'Адміністратор'};
-export const STATUS_LABEL:Record<LessonStatus,string>={scheduled:'Заплановано',rescheduled:'Перенесено',cancelled:'Скасовано'};
+export const STATUS_LABEL:Record<LessonStatus,string>={scheduled:'Заплановано',rescheduled:'Перенесено',cancelled:'Скасовано',completed:'Проведено'};
