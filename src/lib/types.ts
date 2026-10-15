@@ -10,3 +10,5 @@ export interface Notice { id:string;user_id:string;lesson_id:string|null;message
 export interface UserRow {id:string;email:string;full_name:string;role:Role;}
 export const ROLE_LABEL:Record<Role,string>={student:'Студент',teacher:'Викладач',admin:'Адміністратор'};
 export const STATUS_LABEL:Record<LessonStatus,string>={scheduled:'Заплановано',rescheduled:'Перенесено',cancelled:'Скасовано',completed:'Проведено'};
+
+export interface Assignment {id:string;teacher_id:string;student_id:string;subject:string;created_at:string;}
