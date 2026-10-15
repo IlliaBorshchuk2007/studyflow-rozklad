@@ -1,0 +1,16 @@
+export const DAYS = ['Понеділок','Вівторок','Середа','Четвер','Пʼятниця','Субота','Неділя'];
+export const SHORT_DAYS = ['Пн','Вт','Ср','Чт','Пт','Сб','Нд'];
+export const dateISO = (d: Date): string => `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,'0')}-${String(d.getUTCDate()).padStart(2,'0')}`;
+export const parseISO = (s: string): Date => new Date(`${s.slice(0,10)}T12:00:00Z`);
+export const addDays = (day: string, n: number): string => { const d=parseISO(day); d.setUTCDate(d.getUTCDate()+n); return dateISO(d); };
+export const weekStart = (s:string):string => {const d=parseISO(s);return addDays(s,-((d.getUTCDay()+6)%7));};
+export const monthStart = (s:string):string => `${s.slice(0,7)}-01`;
+export const monthCells = (s:string):string[] => {const first=weekStart(monthStart(s));const start=parseISO(first);const year=parseISO(s).getUTCFullYear();const m=parseISO(s).getUTCMonth();const days=[];for(let i=0;i<42;i++){const date=addDays(dateISO(start),i);days.push(date);}if(parseISO(days[35]).getUTCMonth()!==m || parseISO(days[35]).getUTCFullYear()!==year) return days.slice(0,35);return days;};
+export const weekDays = (s:string):string[] => Array.from({length:7},(_,i)=>addDays(weekStart(s),i));
+export const addMonths=(s:string,n:number):string=>{const date=parseISO(`${s.slice(0,7)}-01`);date.setUTCMonth(date.getUTCMonth()+n);return dateISO(date);};
+export const kyivToday=():string=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const x=Object.fromEntries(parts.map(p=>[p.type,p.value]));return `${x.year}-${x.month}-${x.day}`;};
+export const showDate=(s:string,opts:Intl.DateTimeFormatOptions={day:'numeric',month:'short'}):string=>new Intl.DateTimeFormat('uk-UA',{timeZone:'UTC',...opts}).format(parseISO(s));
+export const calcDuration=(a:string,b:string):number=>{const x=a.slice(0,5).split(':').map(Number),y=b.slice(0,5).split(':').map(Number);return y[0]*60+y[1]-x[0]*60-x[1];};
+export const durationText=(n:number):string=>n>=60?`${Math.floor(n/60)} год${n%60?` ${n%60} хв`:''}`:`${n} хв`;
+export const safeLink=(url:string|null|undefined):string=>{try{const u=new URL((url||'').trim());return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}};
+export const dayOfWeek=(s:string):number=>(parseISO(s).getUTCDay()+6)%7+1;
