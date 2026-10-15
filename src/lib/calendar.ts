@@ -5,7 +5,7 @@ export const parseISO = (s: string): Date => new Date(`${s.slice(0,10)}T12:00:00
 export const addDays = (day: string, n: number): string => { const d=parseISO(day); d.setUTCDate(d.getUTCDate()+n); return dateISO(d); };
 export const weekStart = (s:string):string => {const d=parseISO(s);return addDays(s,-((d.getUTCDay()+6)%7));};
 export const monthStart = (s:string):string => `${s.slice(0,7)}-01`;
-export const monthCells = (s:string):string[] => {const first=weekStart(monthStart(s));const start=parseISO(first);const year=parseISO(s).getUTCFullYear();const m=parseISO(s).getUTCMonth();const days=[];for(let i=0;i<42;i++){const date=addDays(dateISO(start),i);days.push(date);}if(parseISO(days[35]).getUTCMonth()!==m || parseISO(days[35]).getUTCFullYear()!==year) return days.slice(0,35);return days;};
+export const monthCells = (s:string):string[] => {const first=weekStart(monthStart(s));const start=parseISO(first);const year=parseISO(s).getUTCFullYear();const m=parseISO(s).getUTCMonth();const days:string[]=[];for(let i=0;i<42;i++){const date=addDays(dateISO(start),i);days.push(date);}if(parseISO(days[35]).getUTCMonth()!==m || parseISO(days[35]).getUTCFullYear()!==year) return days.slice(0,35);return days;};
 export const weekDays = (s:string):string[] => Array.from({length:7},(_,i)=>addDays(weekStart(s),i));
 export const addMonths=(s:string,n:number):string=>{const date=parseISO(`${s.slice(0,7)}-01`);date.setUTCMonth(date.getUTCMonth()+n);return dateISO(date);};
 export const kyivToday=():string=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const x=Object.fromEntries(parts.map(p=>[p.type,p.value]));return `${x.year}-${x.month}-${x.day}`;};
