@@ -12,3 +12,5 @@ export const ROLE_LABEL:Record<Role,string>={student:'Студент',teacher:'�
 export const STATUS_LABEL:Record<LessonStatus,string>={scheduled:'Заплановано',rescheduled:'Перенесено',cancelled:'Скасовано',completed:'Проведено'};
 
 export interface Assignment {id:string;teacher_id:string;student_id:string;subject:string;created_at:string;}
+
+export interface RescheduleEvent { id:string; lesson_id:string; lesson_title:string; old_date:string; old_starts_at:string; old_ends_at:string; new_date:string; new_starts_at:string; new_ends_at:string; teacher_id:string|null; group_id:string|null; student_id:string|null; actor_id:string|null; changed_at:string; }
