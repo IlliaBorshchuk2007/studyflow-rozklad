@@ -1,5 +1,5 @@
 import {useEffect,useMemo,useState,type FormEvent} from 'react';
-import {Check,ChevronLeft,ChevronRight,Filter,Plus,Search,Trash2,UsersRound,X} from 'lucide-react';
+import {Check,ChevronLeft,ChevronRight,Filter,Plus,Search,Trash2,X} from 'lucide-react';
 import {supabase} from './lib/supabase.ts';
 import {ROLE_LABEL,type Group,type Membership,type Profile,type Role,type UserRow} from './lib/types.ts';
 import './dashboard.css';
