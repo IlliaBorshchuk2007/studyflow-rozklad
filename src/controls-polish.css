@@ -1,0 +1,224 @@
+/* StudyFlow 2.8 — Quiet Controls
+ * Cosmetic-only global form and button polish.
+ * Loaded last. Remove this stylesheet import to restore the previous look.
+ * No selectors affect scheduling logic, permissions or database requests.
+ */
+:root{
+  --control-radius:10px;
+  --control-height:44px;
+  --control-border:#d8e1eb;
+  --control-hover:#aebed1;
+  --control-focus:#3c72a8;
+  --control-ring:0 0 0 3px rgba(45,104,163,.115);
+  --control-bg:#ffffff;
+  --control-soft:#f7f9fc;
+  --control-text:#25354b;
+  --control-placeholder:#94a0b0;
+}
+:root[data-theme=dark]{
+  --control-border:#45586b;
+  --control-hover:#8298b0;
+  --control-focus:#a4c8ee;
+  --control-ring:0 0 0 3px rgba(142,191,241,.15);
+  --control-bg:#233243;
+  --control-soft:#283848;
+  --control-text:#e9eff6;
+  --control-placeholder:#a5b2c1;
+}
+/* Uniform, comfortable controls; leave native radio, checkbox and file inputs alone. */
+.app-shell :is(input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']):not([type='hidden']), select, textarea),
+.auth-page :is(input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']):not([type='hidden']), select, textarea){
+  box-sizing:border-box;
+  min-width:0;
+  min-height:var(--control-height);
+  padding:10px 14px;
+  border:1px solid var(--control-border);
+  border-radius:var(--control-radius);
+  background-color:var(--control-bg);
+  color:var(--control-text);
+  font:inherit;
+  font-size:13px;
+  line-height:1.45;
+  box-shadow:0 1px 2px rgba(15,33,54,.025);
+  transition:border-color .15s ease,box-shadow .15s ease,background-color .15s ease;
+}
+.app-shell textarea,.auth-page textarea{min-height:96px;resize:vertical;line-height:1.55}
+.app-shell :is(input,textarea)::placeholder,.auth-page :is(input,textarea)::placeholder{
+ color:var(--control-placeholder);
+ opacity:1;
+}
+.app-shell :is(input,select,textarea):hover:not(:disabled):not([readonly]),
+.auth-page :is(input,select,textarea):hover:not(:disabled):not([readonly]){border-color:var(--control-hover)}
+.app-shell :is(input,select,textarea):focus-visible,
+.auth-page :is(input,select,textarea):focus-visible{
+  outline:0;
+  border-color:var(--control-focus);
+  box-shadow:var(--control-ring);
+}
+.app-shell :is(input,select,textarea):disabled,
+.auth-page :is(input,select,textarea):disabled{
+  background:var(--control-soft);
+  opacity:.65;
+  cursor:not-allowed;
+}
+/* Clean dropdown arrow with consistent padding across forms and filters. */
+.app-shell select,.auth-page select{
+  appearance:none;
+  -webkit-appearance:none;
+  padding-right:40px !important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23667e96' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 13px center;
+  background-size:14px 14px;
+  cursor:pointer;
+}
+:root[data-theme=dark] .app-shell select,
+:root[data-theme=dark] .auth-page select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c4d5e5' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  color-scheme:dark;
+}
+:root[data-theme=dark] .app-shell :is(input,textarea),
+:root[data-theme=dark] .auth-page :is(input,textarea){color-scheme:dark}
+/* Restrained reusable buttons. */
+.app-shell .btn,.auth-page .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:40px;
+  padding:9px 15px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:12px;
+  line-height:1.3;
+  box-shadow:none;
+  transition:background-color .15s ease,border-color .15s ease,transform .15s ease,box-shadow .15s ease;
+}
+.app-shell .btn.compact,.auth-page .btn.compact{min-height:36px;padding:8px 12px;font-size:11px}
+.app-shell .btn.primary,.auth-page .btn.primary{background:#2b547d;border-color:#2b547d;color:#fff}
+.app-shell .btn.primary:hover:not(:disabled),
+.auth-page .btn.primary:hover:not(:disabled){background:#376995;border-color:#376995}
+.app-shell .btn.light,.auth-page .btn.light{
+  background:var(--control-bg);
+  color:var(--control-text);
+  border:1px solid var(--control-border);
+}
+.app-shell .btn.light:hover:not(:disabled),
+.auth-page .btn.light:hover:not(:disabled){background:var(--control-soft);border-color:var(--control-hover)}
+.app-shell .btn.danger,.auth-page .btn.danger{color:#af4859;border:1px solid #edcdd2;background:#fff7f8}
+.app-shell .btn.danger:hover:not(:disabled),.auth-page .btn.danger:hover:not(:disabled){background:#fbeaec}
+.app-shell .btn:focus-visible,.auth-page .btn:focus-visible,.app-shell .icon-btn:focus-visible{
+ outline:0;box-shadow:var(--control-ring);border-color:var(--control-focus)
+}
+.app-shell .icon-btn{border-radius:10px;min-width:36px;min-height:36px}
+.app-shell .btn:disabled,.auth-page .btn:disabled{cursor:not-allowed;opacity:.5;transform:none}
+/* Checkbox affordance and readable form labels. */
+.app-shell input[type='checkbox'],.app-shell input[type='radio'],.auth-page input[type='checkbox']{
+ accent-color:#2b5e91;
+ width:17px;height:17px;
+ flex-shrink:0;
+ cursor:pointer;
+}
+.app-shell :is(.stack-form,.edit-form,.profile-form,.gmanager-create,.request-decide) label,
+.app-shell .learning-row>label{font-size:12px;font-weight:650;color:var(--text);line-height:1.4}
+.app-shell label:has(>input[type='checkbox']){cursor:pointer}
+.app-shell input[type='file']{max-width:100%}
+/* The user directory screenshot: make search + all filters one designed group. */
+.app-shell .gmanager-filters{
+  background:var(--control-soft);
+  border:1px solid var(--control-border);
+  border-radius:14px;
+  padding:15px;
+  column-gap:11px;
+  row-gap:10px;
+  margin:18px 0 16px;
+  align-items:stretch;
+}
+.app-shell .gmanager-filters>select{width:100%;min-width:0}
+.app-shell .gmanager-search{
+  height:var(--control-height);
+  padding:0 12px;
+  border:1px solid var(--control-border);
+  background:var(--control-bg);
+  border-radius:var(--control-radius);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  box-shadow:0 1px 2px rgba(15,33,54,.025);
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.app-shell .gmanager-search:hover{border-color:var(--control-hover)}
+.app-shell .gmanager-search:focus-within{border-color:var(--control-focus);box-shadow:var(--control-ring)}
+.app-shell .gmanager-search svg{flex:none;width:17px}
+.app-shell .gmanager-search input{
+  width:100%;height:100%;min-height:0;
+  background:transparent;border:0;border-radius:0;
+  padding:0;box-shadow:none;font-size:13px;
+}
+.app-shell .gmanager-search input:hover,.app-shell .gmanager-search input:focus-visible{
+ border:0;outline:0;box-shadow:none
+}
+.app-shell .gmanager-meta{gap:10px;padding:10px 0 13px}
+.app-shell .gmanager-meta span{font-size:12px;color:var(--muted)}
+.app-shell .gmanager-person{border-radius:11px;transition:border-color .15s ease,background-color .15s ease}
+.app-shell .gmanager-person:hover{border-color:var(--control-hover);background:var(--control-soft)}
+.app-shell .gmanager-person.picked{background:var(--pale);border-color:#7e9fc0}
+.app-shell .gmanager-paging{gap:9px}
+.app-shell .gmanager-assignee,.app-shell .gmanager-group{border-radius:10px}
+.app-shell .gmanager-preview{border-radius:12px}
+.app-shell .gmanager-preview .btn{margin-top:5px}
+/* Other forms, searches and filter panels use the same comfortable geometry. */
+.app-shell .filters{border-radius:13px;padding:14px;gap:10px}
+.app-shell .filters select,.app-shell .filters .date-jump{min-height:var(--control-height);height:var(--control-height);border-radius:var(--control-radius)}
+.app-shell .filters .search{
+ height:var(--control-height);
+ min-height:var(--control-height);
+ border:1px solid var(--control-border);
+ background:var(--control-bg);
+ border-radius:var(--control-radius);
+ padding:0 12px;
+}
+.app-shell .filters .search:focus-within{border-color:var(--control-focus);box-shadow:var(--control-ring)}
+.app-shell .filters .search input{border:0;box-shadow:none;background:transparent;min-height:0;height:100%;padding:0}
+.app-shell .filters .search input:focus-visible{border:0;box-shadow:none}
+.app-shell .an-filters{border-radius:13px}
+.app-shell .an-dropdowns>select,.app-shell .an-dropdowns>input{flex-basis:180px}
+.app-shell .an-periods .btn{border-radius:9px}
+.app-shell .learning-toolbar{border-radius:12px}
+.app-shell .request-decide input,.app-shell .invite-created input{max-width:100%}
+.app-shell .attendance-pill{
+ border-radius:9px;min-height:39px;padding:8px 12px;
+ font-size:12px;font-weight:650;transition:background-color .15s ease,border-color .15s ease
+}
+.app-shell .attendance-pill:not(.selected):hover{background:var(--control-soft);border-color:var(--control-hover)}
+.app-shell .repeat-editor,.app-shell .reschedule-explainer{border-radius:12px;padding:15px}
+.app-shell .dialog{border-radius:15px}
+.app-shell .dialog-actions{gap:10px}
+.app-shell .lesson-details-btn{border-radius:8px}
+.app-shell .notice-back{border-radius:10px}
+.app-shell .invite-created{border-radius:12px}
+/* Login form gets identical controls without changing its auth behavior. */
+.auth-page input:not([type='checkbox']):not([type='radio']),.auth-page select{width:100%}
+@media(max-width:720px){
+  .app-shell .gmanager-filters{padding:12px;gap:9px}
+  .app-shell .gmanager-search{min-width:0}
+  .app-shell .gmanager-bottom{align-items:stretch}
+}
+@media(max-width:480px){
+  :root{--control-height:44px}
+  .app-shell :is(input:not([type='checkbox']):not([type='radio']):not([type='range']),select,textarea),
+  .auth-page :is(input:not([type='checkbox']):not([type='radio']),select,textarea){font-size:16px}
+  .app-shell .gmanager-search input{font-size:16px}
+  .app-shell .gmanager-filters{grid-template-columns:1fr}
+  .app-shell .gmanager-search{grid-column:span 1}
+  .app-shell .gmanager-meta{align-items:stretch}
+  .app-shell .gmanager-meta .btn{flex:1 1 auto}
+  .app-shell .gmanager-bottom>.btn{width:100%}
+  .app-shell .an-dropdowns>select,.app-shell .an-dropdowns>input{flex:1 1 100%}
+  .app-shell .request-decide .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .app-shell :is(input,select,textarea,.btn,.gmanager-search,.attendance-pill){transition:none}
+}
+@media print{.app-shell :is(input,select,textarea,.btn){box-shadow:none!important}}
