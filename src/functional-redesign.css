@@ -200,7 +200,7 @@ h1,h2,h3{letter-spacing:-.045em}
 @media(max-width:650px){
  .sidebar{position:fixed;top:auto;bottom:0;height:calc(73px + env(safe-area-inset-bottom,0px));width:100%;padding:5px 0 max(6px,env(safe-area-inset-bottom,0px));border-right:0;border-top:1px solid var(--line);border-radius:0;display:block;overflow:hidden;background:var(--surface)}
  .nav-list{display:flex;flex-direction:row;overflow-x:auto;overflow-y:hidden;width:100%;height:100%;justify-content:flex-start;gap:0;scrollbar-width:thin;scrollbar-color:var(--line) transparent;overscroll-behavior-x:contain}
- .nav-item,.nav-item.active{flex:0 0 75px;max-width:none;width:75px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:5px 4px;border:0;border-radius:6px;min-height:55px;font-size:9px;line-height:1.1;white-space:normal;text-align:center;font-weight:650;position:relative}
+ .nav-item,.nav-item:not(.active),.nav-item.active{flex:0 0 75px;max-width:none;width:75px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:5px 4px;border:0;border-radius:6px;min-height:55px;font-size:9px;line-height:1.1;white-space:normal;text-align:center;font-weight:650;position:relative}
  .nav-item svg{width:19px;height:19px;flex:none}
  .nav-item.active{background:var(--pale);color:var(--blue)}
  .nav-count{position:absolute;top:1px;right:8px;font-size:8px;min-width:17px}
