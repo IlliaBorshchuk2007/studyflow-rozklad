@@ -9,8 +9,8 @@ test('clean academic login removes blurry background asset and retains real form
  assert.match(src,/className="auth-page auth-page-v3"/);
  assert.match(src,/className="auth-intro" aria-hidden="true"/);
  assert.doesNotMatch(src,/Твій час\./);
- assert.doesNotMatch(styles,/auth-architecture\\.webp/);
- assert.match(styles,/linear-gradient\\(160deg,#102f52/);
+ assert.ok(!styles.includes('auth-architecture.webp'));
+ assert.ok(styles.includes('linear-gradient(160deg,#102f52'));
  assert.match(styles,/\.auth-page-v3 \.auth-intro:after/);
  assert.ok(entry.indexOf("import './auth-v3.css'")>entry.indexOf("import './brand.css'"));
 });
