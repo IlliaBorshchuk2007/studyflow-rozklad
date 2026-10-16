@@ -1,0 +1,99 @@
+/* Borshchuk Education — navy and gold identity.
+ * Visual-only layer; authentication, scheduling and database stay untouched.
+ */
+:root{
+  --brand-navy:#082b51;
+  --brand-gold:#cba35b;
+}
+.brand-crest{
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  flex-shrink:0;
+  background:transparent;
+  box-shadow:none;
+}
+.sidebar .brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding-bottom:34px;
+}
+.sidebar-crest{width:49px;height:58px;}
+.sidebar .brand-name{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  line-height:1.15;
+  letter-spacing:0;
+}
+.sidebar .brand-name strong{
+  display:block;
+  font-family:Manrope,Georgia,serif;
+  font-size:16px;
+  line-height:1.3;
+  font-weight:800;
+  letter-spacing:-.55px;
+  color:var(--text);
+}
+.sidebar .brand-name small{
+  display:block;
+  font-size:10px;
+  margin-top:6px;
+  letter-spacing:2.7px;
+  font-weight:750;
+  color:#96713c;
+}
+.auth-brand{
+  display:flex;
+  align-items:center;
+  gap:17px;
+  letter-spacing:0;
+}
+.auth-crest{width:65px;height:78px;}
+.auth-wordmark{display:flex;flex-direction:column;gap:6px;line-height:1.15;min-width:0}
+.auth-wordmark strong{
+  font-family:Manrope,Georgia,serif;
+  font-size:clamp(24px,2.6vw,33px);
+  font-weight:800;
+  letter-spacing:-1.15px;
+  color:var(--text);
+}
+.auth-wordmark small{
+  font-family:Manrope,Georgia,serif;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.38em;
+  color:#9b743b;
+}
+.auth-icon{background:transparent;box-shadow:none;padding:0;overflow:visible}
+.auth-card-crest{width:45px;height:50px;object-fit:contain;display:block}
+footer .brand-footer{
+  font-size:13px;
+  color:var(--text);
+  font-weight:750;
+  letter-spacing:-.2px;
+}
+footer .brand-footer strong{color:var(--brand-navy);font-weight:850}
+:root[data-theme='dark'] .sidebar .brand-name strong,
+:root[data-theme='dark'] .auth-wordmark strong{color:#f2f5f9}
+:root[data-theme='dark'] .sidebar .brand-name small,
+:root[data-theme='dark'] .auth-wordmark small{color:#e0bd7d}
+:root[data-theme='dark'] footer .brand-footer strong{color:#d9c08a}
+@media(max-width:980px) and (min-width:651px){
+  .sidebar-crest{width:46px;height:55px}
+  .sidebar .brand{padding:0 2px 29px;justify-content:center}
+  .sidebar .brand-name{display:none}
+}
+@media(max-width:650px){
+  .auth-crest{width:55px;height:65px}
+  .auth-wordmark strong{font-size:24px}
+  .auth-wordmark small{font-size:9px;letter-spacing:.3em}
+  footer .brand-footer{font-size:12px}
+}
+@media(max-width:390px){
+  .auth-brand{gap:10px}
+  .auth-crest{width:47px;height:57px}
+  .auth-wordmark strong{font-size:21px}
+  .auth-wordmark small{font-size:8px}
+}
