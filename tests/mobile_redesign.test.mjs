@@ -43,3 +43,12 @@ test('safe-area nav and responsive dialogs are added without hiding role actions
  assert.match(html,/Borshchuk Education/);
  assert.doesNotMatch(styles,/supabase\.from|DROP TABLE/i);
 });
+
+test('lesson list filters teacher/group and has page-top and Escape navigation behavior',()=>{
+ for(const v of ['Фільтр навчальної групи','Фільтр викладача','const listed=mode===','onTeacher(e.target.value)','onGroup(e.target.value)']){
+   assert.ok(mobile.includes(v),'Missing mobile filter: '+v);
+ }
+ assert.ok(app.includes('window.scrollTo(0,0)'));
+ assert.ok(app.includes("e.key==='Escape'"));
+ assert.ok(app.includes("document.body.style.overflow='hidden'"));
+});
