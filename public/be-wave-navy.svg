@@ -1,26 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
-<defs>
- <linearGradient id="base" x1="0" y1="0" x2=".92" y2="1"><stop stop-color="#173e64"/><stop offset=".37" stop-color="#0a2a4f"/><stop offset="1" stop-color="#061a36"/></linearGradient>
- <radialGradient id="shine" cx=".36" cy=".13" r=".81"><stop stop-color="#2b6090" stop-opacity=".44"/><stop offset=".68" stop-color="#0a2344" stop-opacity=".06"/><stop offset="1" stop-color="#071c36" stop-opacity="0"/></radialGradient>
- <linearGradient id="ribbonA" x1=".2" y1=".22" x2=".84" y2=".88"><stop stop-color="#315f8b" stop-opacity=".72"/><stop offset=".38" stop-color="#1b4776" stop-opacity=".86"/><stop offset=".8" stop-color="#0b294f" stop-opacity=".95"/><stop offset="1" stop-color="#061a36"/></linearGradient>
- <linearGradient id="ribbonB" x1="0" y1=".1" x2="1" y2=".95"><stop stop-color="#244e7b" stop-opacity=".6"/><stop offset=".5" stop-color="#0f355f"/><stop offset="1" stop-color="#0a2446"/></linearGradient>
- <linearGradient id="ribbonC" x1="0" y1=".3" x2="1" y2=".9"><stop stop-color="#183c65" stop-opacity=".1"/><stop offset=".62" stop-color="#18416c"/><stop offset="1" stop-color="#071d39"/></linearGradient>
- <linearGradient id="gold" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#d1ad78" stop-opacity="0"/><stop offset=".24" stop-color="#dfc08a" stop-opacity=".83"/><stop offset=".55" stop-color="#d7ae68" stop-opacity=".7"/><stop offset=".95" stop-color="#b78a4e" stop-opacity=".05"/></linearGradient>
- <linearGradient id="skyline" x1="0" y1="0" x2=".9" y2=".1"><stop stop-color="#70acd7" stop-opacity=".47"/><stop offset=".85" stop-color="#3776a9" stop-opacity=".2"/><stop offset="1" stop-color="#70acd7" stop-opacity="0"/></linearGradient>
-</defs>
-<path fill="url(#base)" d="M0 0H840V1100H0Z"/>
-<path fill="url(#shine)" d="M0 0H840V1100H0Z"/>
-<!-- Primary, layered, vector waves. All edges remain crisp at any resolution. -->
-<path fill="url(#ribbonA)" d="M-160 352C-20 174 161 227 281 342C450 504 554 659 705 640C780 630 850 577 944 546V1100H-160Z"/>
-<path fill="#0d315a" fill-opacity=".72" d="M-125 431C34 250 184 341 301 464C428 599 565 730 702 729C791 728 868 685 958 659V1100H-125Z"/>
-<path fill="url(#ribbonB)" d="M-172 536C25 349 186 433 332 589C468 733 572 807 710 809C800 811 873 775 953 754V1100H-172Z"/>
-<path fill="url(#ribbonC)" d="M-110 768C76 628 252 624 398 729C538 830 676 974 857 909L930 1100H-110Z"/>
-<path fill="#071d39" fill-opacity=".64" d="M-120 889C88 747 253 741 441 861C591 956 717 1042 886 1001V1130H-120Z"/>
-<!-- Thin metallic and light-blue contours, never glowing or blurry -->
-<path d="M-72 316C87 189 195 266 299 361C457 509 569 684 714 663C808 649 877 604 942 576" fill="none" stroke="url(#skyline)" stroke-width="2.2"/>
-<path d="M-132 386C33 248 172 315 304 443C445 580 573 735 709 715C785 705 868 678 916 669" fill="none" stroke="url(#gold)" stroke-width="1.45"/>
-<path d="M-101 463C91 303 235 409 361 543C498 691 592 756 732 764C807 768 871 744 934 725" fill="none" stroke="#3874a5" stroke-opacity=".32" stroke-width="1.2"/>
-<path d="M-84 675C90 581 237 589 366 660C524 745 630 880 820 848" fill="none" stroke="url(#gold)" stroke-opacity=".56" stroke-width="1.5"/>
-<path d="M-60 783C140 637 289 695 447 804C583 895 712 972 871 920" fill="none" stroke="#397aaa" stroke-opacity=".3" stroke-width="1.4"/>
-<path d="M-80 964C86 856 233 863 365 927C513 1000 682 1063 871 1023" fill="none" stroke="#2f6a9d" stroke-opacity=".23" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0.92" y2="1">
+      <stop offset="0" stop-color="#113353"/>
+      <stop offset=".48" stop-color="#08284a"/>
+      <stop offset="1" stop-color="#061a34"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".13" cy=".12" r=".66">
+      <stop offset="0" stop-color="#3a729b" stop-opacity=".42"/>
+      <stop offset=".37" stop-color="#285780" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#164065" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waveOne" x1=".04" y1=".06" x2=".93" y2=".84">
+      <stop offset="0" stop-color="#336c9e" stop-opacity=".70"/>
+      <stop offset=".46" stop-color="#285781" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#0b294a" stop-opacity=".93"/>
+    </linearGradient>
+    <linearGradient id="waveTwo" x1=".01" y1="0" x2=".94" y2="1">
+      <stop offset="0" stop-color="#1a476f" stop-opacity=".45"/>
+      <stop offset=".5" stop-color="#15395f" stop-opacity=".76"/>
+      <stop offset="1" stop-color="#061a35" stop-opacity=".96"/>
+    </linearGradient>
+    <linearGradient id="waveThree" x1=".04" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11365e" stop-opacity=".48"/>
+      <stop offset=".55" stop-color="#0a2a4e" stop-opacity=".77"/>
+      <stop offset="1" stop-color="#071c38"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d2b180" stop-opacity=".05"/>
+      <stop offset=".22" stop-color="#edd19b" stop-opacity=".54"/>
+      <stop offset=".64" stop-color="#d6ae76" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#bd925d" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#night)" d="M0 0h840v1100H0z"/>
+  <path fill="url(#halo)" d="M0 0h840v1100H0z"/>
+  <!-- Two broad quiet wave ribbons. -->
+  <path fill="url(#waveOne)" d="M-160 372C-9 240 140 242 286 347C451 467 547 598 719 589C789 586 865 549 978 484L978 780C801 814 676 798 530 704C344 584 197 445-8 455L-160 480Z"/>
+  <path fill="url(#waveTwo)" d="M-150 575C18 434 159 455 322 577C481 694 580 816 746 820C813 822 886 805 968 767V1040C792 1051 639 1025 481 929C296 815 121 666-150 770Z"/>
+  <path fill="url(#waveThree)" d="M-170 860C35 724 211 745 397 867C552 970 696 1057 961 1022V1150H-170Z"/>
+  <!-- One restrained champagne-gold contour follows the upper ribbon. -->
+  <path d="M-106 350C42 237 156 268 286 362C452 480 549 612 720 597C807 589 889 543 952 504" fill="none" stroke="url(#goldStroke)" stroke-width="1.55" stroke-linecap="round"/>
+  <!-- The lower boundary is defined by the fill itself; no extra contour lines. -->
 </svg>

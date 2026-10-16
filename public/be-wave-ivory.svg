@@ -1,20 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
-<defs>
- <linearGradient id="paper" x1=".2" y1="0" x2=".9" y2="1"><stop stop-color="#fafcff"/><stop offset=".58" stop-color="#f8fafc"/><stop offset="1" stop-color="#f5f8fc"/></linearGradient>
- <linearGradient id="softA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity="0"/><stop offset=".65" stop-color="#edf3f9" stop-opacity=".73"/><stop offset="1" stop-color="#e7eef7" stop-opacity=".22"/></linearGradient>
- <linearGradient id="softB" x1="0" y1="1" x2=".7" y2="0"><stop stop-color="#e8f0f8" stop-opacity=".71"/><stop offset=".62" stop-color="#f9fbfd" stop-opacity=".58"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
- <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c49a60" stop-opacity="0"/><stop offset=".3" stop-color="#cda568" stop-opacity=".52"/><stop offset=".7" stop-color="#c49753" stop-opacity=".68"/><stop offset="1" stop-color="#c69a58" stop-opacity="0"/></linearGradient>
-</defs>
-<path fill="url(#paper)" d="M0 0H1040V1100H0Z"/>
-<path fill="url(#softA)" d="M635-135C785-110 924 19 1030 151L1180 432C1037 313 867 266 727 157C647 94 624 5 635-135Z"/>
-<path fill="#fff" fill-opacity=".64" d="M504-145C654 4 742 102 907 194C1010 252 1090 267 1190 354V-145Z"/>
-<path d="M457-136C601 29 696 106 839 185C968 255 1104 320 1189 450" fill="none" stroke="url(#goldStroke)" stroke-width="1.65"/>
-<path d="M510-123C659 81 767 143 920 220C1027 273 1106 351 1172 451" fill="none" stroke="#d2dee9" stroke-opacity=".44" stroke-width="1.1"/>
-<!-- Bottom-left / bottom-right paper arcs never cross the login form. -->
-<path fill="url(#softB)" d="M-186 690C-25 672 122 751 248 891C359 1012 453 1061 569 1151H-186Z"/>
-<path fill="#fff" fill-opacity=".77" d="M-116 814C60 716 185 886 325 1011C405 1082 464 1093 566 1158H-116Z"/>
-<path d="M-85 713C103 647 230 813 364 933C472 1030 596 1108 768 1140" fill="none" stroke="url(#goldStroke)" stroke-width="1.45"/>
-<path d="M-65 771C118 752 231 895 364 992C474 1073 552 1108 671 1152" fill="none" stroke="#bfccda" stroke-opacity=".35" stroke-width="1.1"/>
-<path fill="url(#softB)" fill-opacity=".36" d="M907 596C1041 648 1110 769 1160 865V1153H833C933 987 880 804 907 596Z"/>
-<path d="M1013 493C947 595 974 720 1091 840" fill="none" stroke="#d1ab72" stroke-opacity=".27" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2=".96" y2="1">
+      <stop offset="0" stop-color="#f9fbfd"/>
+      <stop offset=".57" stop-color="#fafbfc"/>
+      <stop offset="1" stop-color="#f6f9fc"/>
+    </linearGradient>
+    <linearGradient id="mistTop" x1=".1" y1="0" x2=".94" y2=".92">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".94"/>
+      <stop offset=".52" stop-color="#edf3f9" stop-opacity=".61"/>
+      <stop offset="1" stop-color="#e9f0f7" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="mistBottom" x1="0" y1=".1" x2=".95" y2="1">
+      <stop offset="0" stop-color="#edf2f9" stop-opacity=".06"/>
+      <stop offset=".65" stop-color="#e8f0f8" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#e3ebf5" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7b57f" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#cba46b" stop-opacity=".32"/>
+      <stop offset=".9" stop-color="#b89562" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#d4b07b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h1040v1100H0z"/>
+  <!-- One generous almost-white sculpted arc in the far upper right. -->
+  <path fill="url(#mistTop)" d="M528-181C610-17 752 86 907 160C1060 234 1166 339 1236 522V-181Z"/>
+  <path fill="#fff" fill-opacity=".52" d="M707-115C788 34 891 96 1024 161C1143 220 1201 312 1250 416V-115Z"/>
+  <path d="M610-131C698 25 814 98 966 170C1118 242 1193 323 1264 468" fill="none" stroke="url(#goldStroke)" stroke-width="1.25"/>
+  <!-- One low-contrast bottom-left fold, away from the sign-in card. -->
+  <path fill="url(#mistBottom)" d="M-176 693C-24 685 119 770 242 913C342 1028 461 1087 632 1173H-176Z"/>
+  <path d="M-141 744C-8 720 130 810 249 940C350 1051 467 1117 590 1166" fill="none" stroke="url(#goldStroke)" stroke-width="1.2"/>
 </svg>
