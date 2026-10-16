@@ -2,7 +2,7 @@ import {useEffect,useMemo,useState} from 'react';
 import {ArrowRight,BarChart3,CalendarDays,ChevronLeft,ChevronRight,RefreshCw} from 'lucide-react';
 import {supabase} from './lib/supabase.ts';
 import {addDays,dateISO,monthStart,parseISO,weekStart,kyivToday} from './lib/calendar.ts';
-import {ROLE_LABEL,STATUS_LABEL,type AuditEntry,type Group,type Lesson,type LessonStatus,type Membership,type Profile,type Role} from './lib/types.ts';
+import {STATUS_LABEL,type AuditEntry,type Group,type Lesson,type LessonStatus,type Membership,type Profile,type Role} from './lib/types.ts';
 import './dashboard.css';
 
 type Period='day'|'week'|'month'|'semester'|'custom';
