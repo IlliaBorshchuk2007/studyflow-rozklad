@@ -6,4 +6,5 @@ import './functional-redesign.css';
 import './controls-polish.css';
 import './brand.css';
 import './auth-v3.css';
+import './auth-waves.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
