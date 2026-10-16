@@ -5,4 +5,5 @@ import './styles.css';
 import './functional-redesign.css';
 import './controls-polish.css';
 import './brand.css';
+import './auth-v3.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
