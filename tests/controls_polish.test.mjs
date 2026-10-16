@@ -5,10 +5,12 @@ const read=(file)=>readFileSync(new URL('../'+file,import.meta.url),'utf8');
 const entry=read('src/main.tsx');
 const app=read('src/App.tsx');
 const styles=read('src/controls-polish.css');
+const groupManager=read('src/GroupManager.tsx');
 test('real application is still entrypoint and control polish is loaded last',()=>{
  assert.match(entry,/import App from '\.\/App\.tsx'/);
  assert.ok(entry.indexOf("import './controls-polish.css'")>entry.indexOf("import './functional-redesign.css'"));
- for(const functionName of ['supabase.auth','saveLesson','createSeries','editSeries','AttendancePanel','GroupManager','StatisticsDashboard','ScheduleRequests','GroupInvitations']){
+ assert.ok(groupManager.includes('GroupInvitations'),'Missing group invitation workflow');
+ for(const functionName of ['supabase.auth','saveLesson','createSeries','editSeries','AttendancePanel','GroupManager','StatisticsDashboard','ScheduleRequests']){
    assert.ok(app.includes(functionName),'Missing functionality: '+functionName);
  }
 });
