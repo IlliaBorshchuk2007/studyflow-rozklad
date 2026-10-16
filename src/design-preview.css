@@ -172,3 +172,122 @@ a{color:inherit}
 .dp-dark .dp-lesson{color:#28312e}
 .dp-dark .dp-quiet-decoration{color:#537c62}
 .dp-dark .dp-btn.dark{background:#bbd5c3;color:#1c3122;border-color:#bbd5c3}
+
+
+/* StudyFlow preview v2: strict academic UI, deliberately separate from production */
+.dp-shell{
+ --bg:#f4f6f8;--surface:#fff;--sidebar:#f8f9fb;--ink:#172436;--muted:#697789;
+ --stroke:#dde3ea;--faint:#f1f4f7;--accent:#244c7b;--accent-soft:#e5edf6;
+ --shadow:0 1px 2px rgba(21,35,53,.025);
+ font-family:Inter,'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
+}
+.dp-shell.dp-dark{
+ --bg:#151c26;--surface:#1d2733;--sidebar:#18212c;--ink:#f2f5f9;
+ --muted:#b1bdcb;--stroke:#364456;--faint:#243140;--accent:#acc9f0;
+ --accent-soft:#2b3e55;--shadow:none
+}
+.dp-sidebar{width:245px;flex-basis:245px;padding:24px 16px 18px}
+.dp-brand{padding:0 8px 24px}
+.dp-brand-icon{background:#19395c;color:#fff;border-radius:9px}
+.dp-brand>div>strong{font-size:21px;letter-spacing:-.85px}
+.dp-brand>div>strong span{color:var(--accent)}
+.dp-brand small{font-size:10px;letter-spacing:.1px}
+.dp-side-role{display:grid;gap:8px;padding:16px 9px 22px;border-top:1px solid var(--stroke);margin-bottom:11px}
+.dp-side-role label{font-size:10px;font-weight:800;letter-spacing:1.2px;color:var(--muted)}
+.dp-side-role select{height:39px;width:100%;padding:0 10px;border:1px solid var(--stroke);border-radius:7px;background:var(--surface);color:var(--ink);font-size:12px;font-weight:700}
+.dp-sidebar-caption{font-size:10px;margin-bottom:12px;letter-spacing:1.15px}
+.dp-nav-item{border-radius:7px;padding:12px;font-size:12px;font-weight:600}
+.dp-nav-item.active{background:var(--accent-soft);color:var(--accent);border-left:3px solid var(--accent);padding-left:9px}
+.dp-aside-note{background:transparent;padding:14px 12px;border-radius:8px;gap:5px}
+.dp-aside-note strong{font-size:11px;font-weight:800}
+.dp-aside-note small{font-size:10px;line-height:1.55}
+.dp-avatar{border-radius:8px;background:#dce5ef;color:#274766}
+.dp-profile{padding-top:17px}
+.dp-topbar{height:66px;padding:0 clamp(18px,2.8vw,42px)}
+.dp-breadcrumb{font-size:12px}
+.dp-top-role{display:flex;align-items:center;gap:9px;color:var(--muted);font-weight:700;font-size:11px;white-space:nowrap}
+.dp-top-role select{height:35px;color:var(--ink);background:var(--surface);border:1px solid var(--stroke);border-radius:7px;font-size:12px;font-weight:700;min-width:149px;padding:0 9px}
+.dp-top-preview{border-radius:6px;padding:7px 10px;background:var(--faint);font-size:10px}
+.dp-top-preview>span{background:#4573aa}
+.dp-icon-btn,.dp-arrow{border-radius:7px}
+.dp-preview-note{background:var(--faint);color:var(--muted);border:1px solid var(--stroke);border-radius:8px;font-size:11px;margin-bottom:29px}
+.dp-preview-note strong{color:var(--ink)}
+.dp-hero{margin-bottom:25px}
+.dp-eyebrow{color:var(--accent);font-size:10px;letter-spacing:1.15px}
+.dp-hero h1{font-size:clamp(30px,2.8vw,40px);letter-spacing:-1.4px;margin:10px 0 8px}
+.dp-hero h1 span{color:var(--accent)}
+.dp-hero p{font-size:13px}
+.dp-btn{border-radius:7px;font-size:12px;font-weight:700}
+.dp-btn.dark{background:#1b354f;border-color:#1b354f}
+.dp-btn.dark:hover{background:#2c4c6b}
+.dp-calendar,.dp-small-card{border-radius:10px;box-shadow:none}
+.dp-calendar-head{padding:20px 21px 17px}
+.dp-calendar-head h2{font-size:18px}
+.dp-view-switch{border-radius:7px}
+.dp-view-switch button{border-radius:5px;font-size:12px}
+.dp-search,.dp-status-select{border-radius:7px}
+.dp-week-grid{border-radius:5px 5px 0 0}
+.dp-weekday.today{background:var(--accent-soft)}
+.dp-weekday.today strong{background:#275078}
+.dp-day-track.today{background-color:rgba(54,101,148,.04)}
+.dp-lesson{border-radius:5px;padding:11px 8px;color:#1f3045}
+.dp-lesson:hover{filter:none;border-color:var(--tone);transform:none}
+.dp-l-time{font-size:10px;color:#44576d}
+.dp-lesson strong{font-size:11px;line-height:1.4}
+.dp-l-sub{color:#58677c}
+.dp-l-status{font-weight:800}
+.dp-color-green{--tone:#577ca3;--tone-bg:#eef3f9}
+.dp-color-purple{--tone:#7a769c;--tone-bg:#f1f0f7}
+.dp-color-orange{--tone:#9c8064;--tone-bg:#f7f2ee}
+.dp-color-blue{--tone:#537a93;--tone-bg:#ecf3f7}
+.dp-color-sand{--tone:#b39662;--tone-bg:#f8f3e8}
+.dp-color-rose{--tone:#b87983;--tone-bg:#faf0f1}
+.dp-s-completed{color:#217451}
+.dp-s-scheduled{color:#275c8c}
+.dp-s-rescheduled{color:#906224}
+.dp-s-cancelled{color:#b24854}
+.dp-month-day{border-color:var(--stroke)}
+.dp-month-day.today strong{background:#275078}
+.dp-day-selector button.selected{background:var(--accent-soft);border-color:#6485aa}
+.dp-calendar-foot svg{color:var(--accent)}
+.dp-upcoming:hover{background:var(--faint)}
+.dp-quiet-card{background:var(--surface);justify-content:flex-start;gap:13px}
+.dp-quiet-card h3{font-size:19px;line-height:1.4}
+.dp-quiet-card p{max-width:330px;font-size:12px}
+.dp-overview-stat{display:flex;align-items:baseline;gap:9px;padding:10px 0;margin-top:auto;border-top:1px solid var(--stroke);width:100%}
+.dp-overview-stat strong{font-size:25px;font-family:Manrope,sans-serif;letter-spacing:-.7px}
+.dp-overview-stat span{font-size:11px;color:var(--muted)}
+.dp-quiet-card button{color:var(--accent);font-size:11px;padding:7px 0}
+.dp-footer{color:var(--accent)}
+.dp-preview-cards>div{border-radius:8px}
+.dp-modal{border-radius:10px}
+.dp-detail-list svg{color:var(--accent)}
+.dp-shell.dp-dark .dp-brand-icon{background:#c4d9f0;color:#203b57}
+.dp-shell.dp-dark .dp-btn.dark{background:#b5cbe2;border-color:#b5cbe2;color:#1a3047}
+.dp-shell.dp-dark .dp-lesson{color:#233346}
+.dp-shell.dp-dark .dp-avatar{background:#354a63;color:#dbe7f4}
+@media(max-width:850px){
+ .dp-sidebar{display:none}
+ .dp-top-role{gap:5px}
+ .dp-top-role select{min-width:130px}
+ .dp-top-preview{display:none}
+ .dp-topbar{height:63px}
+ .dp-bottom-cards{grid-template-columns:1fr}
+ .dp-mobile-nav button.active{color:var(--accent)}
+ .dp-day-selector button.selected{background:var(--accent-soft)}
+}
+@media(max-width:600px){
+ .dp-top-role{font-size:0}
+ .dp-top-role select{min-width:115px;max-width:135px;font-size:11px}
+ .dp-top-right{gap:5px}
+ .dp-breadcrumb{gap:4px}
+ .dp-topbar{padding:0 11px}
+ .dp-topbar .dp-avatar{display:none}
+ .dp-preview-note{font-size:10px}
+ .dp-hero h1{font-size:29px}
+ .dp-hero .dp-btn{width:100%}
+ .dp-calendar-head{padding:17px 13px 14px}
+ .dp-btn{padding:10px 12px}
+ .dp-mobile-nav{border-top:1px solid var(--stroke)}
+}
+@media(max-width:410px){.dp-topbar .dp-top-right .dp-icon-btn:first-of-type{display:none}.dp-top-role select{min-width:105px;max-width:118px}}
