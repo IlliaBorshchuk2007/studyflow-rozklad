@@ -27,3 +27,14 @@ test('all app features remain intact; mobile form remains visible',()=>{
  assert.match(styles,/\.auth-page-v3 \.auth-intro\{display:none\}/);
  assert.match(styles,/\.auth-page-v3 \.auth-grid\{display:flex/);
 });
+
+test('English creator credit is placed discreetly on the login page',()=>{
+ assert.match(src,/className="auth-creator-credit"/);
+ assert.match(src,/Designed &amp; Developed by <strong>Illia Borshchuk<\/strong>/);
+ assert.match(src,/auth-creator-heart/);
+ assert.match(styles,/\.auth-page-v3 \.auth-creator-credit/);
+ assert.match(styles,/right:clamp\(22px/);
+ assert.match(styles,/position:relative;/);
+ assert.match(styles,/@media\(max-width:720px\)/);
+ assert.ok(src.includes('Електронна пошта') && src.includes('Забув пароль?'),'Existing Ukrainian interface retained');
+});
