@@ -1,54 +1,105 @@
-/* Borshchuk Education — user-approved navy & ivory wave composition.
-   Pure SVG vectors: crisp at all screen sizes; no blurry raster backgrounds.
-   This is presentational only. Remove this import to restore preceding visuals.
-*/
-.auth-page.auth-page-v3{
-  background:#f8fafc;
+/* Borshchuk Education — Premium Minimal login, v4.
+ * Intentionally few shapes: two generous navy ribbons, one gold contour,
+ * and two exceptionally subtle ivory folds. Assets are sharp SVG vectors.
+ * This stylesheet is presentational only and can be reverted independently.
+ */
+.auth-page.auth-page-v3 {
+  background: #f8fafc;
 }
-.auth-page-v3::before{
-  content:'';
-  position:absolute;
-  inset:0 0 0 40%;
-  z-index:0;
-  pointer-events:none;
-  background:#f9fbfd url('/be-wave-ivory.svg') center center / cover no-repeat;
+.auth-page-v3::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 40%;
+  z-index: 0;
+  pointer-events: none;
+  background: #f9fbfd url('/be-wave-ivory.svg') center / cover no-repeat;
 }
-.auth-page-v3 .auth-intro{
-  background-color:#071e3b;
-  background-image:url('/be-wave-navy.svg');
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
+.auth-page-v3 .auth-intro {
+  background-color: #071f3b;
+  background-image: url('/be-wave-navy.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.auth-page-v3 .auth-intro::before{
-  /* A modest gold signature at the bottom; do not compete with the waves. */
-  left:clamp(30px,5vw,82px);
-  bottom:clamp(38px,6vh,66px);
-  width:min(30%,180px);
-  opacity:.45;
+.auth-page-v3 .auth-intro::before {
+  /* No decorative lines floating in empty space. */
+  display: none;
 }
-.auth-page-v3 .auth-intro::after{
-  width:1px;
-  opacity:.76;
+.auth-page-v3 .auth-intro::after {
+  width: 1px;
+  opacity: .70;
+  background: linear-gradient(180deg, rgba(207,169,113,0), #cfad7e 32%, #b89463 68%, rgba(207,169,113,0));
 }
-.auth-page-v3 .auth-card{
-  position:relative;
-  z-index:1;
-  box-shadow:0 20px 65px rgba(22,44,72,.072);
-  border-color:#e3e9f0;
+.auth-page-v3 .auth-brand {
+  z-index: 2;
 }
-.auth-page-v3 .auth-brand,
-.auth-page-v3 .auth-creator-credit{z-index:2}
-@media(max-width:980px){
-  .auth-page-v3::before{left:38%}
+.auth-page-v3 .auth-crest {
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.16));
 }
-@media(max-width:720px){
-  .auth-page.auth-page-v3{
-    background:linear-gradient(180deg,#f7f9fc 0%,#fff 88%);
+/* A premium but restrained card: slightly wider, calmer radius and shadow. */
+.auth-page-v3 .auth-card {
+  position: relative;
+  z-index: 1;
+  width: min(475px, calc(100% - 56px));
+  padding: clamp(31px, 3.15vw, 49px);
+  border-radius: 17px;
+  background: #fff;
+  border: 1px solid #e3e9f0;
+  box-shadow:
+    0 25px 74px rgba(25, 45, 76, .075),
+    0 6px 18px rgba(25, 45, 76, .026);
+}
+.auth-page-v3 .auth-card h2 {
+  letter-spacing: -.045em;
+}
+.auth-page-v3 .auth-card > p {
+  margin-bottom: 27px;
+}
+.auth-page-v3 .auth-card .stack-form {
+  gap: 17px;
+}
+.auth-page-v3 .auth-card input {
+  border-radius: 10px;
+}
+/* The author's signature stays visible, but never competes with the form. */
+.auth-page-v3 .auth-creator-credit {
+  z-index: 2;
+  color: #91a0b1;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.auth-page-v3 .auth-creator-credit strong {
+  color: #294967;
+  font-weight: 700;
+}
+.auth-page-v3 .auth-creator-line {
+  width: 22px;
+  background: #d1b48c;
+}
+.auth-page-v3 .auth-creator-heart {
+  color: #bd9862;
+}
+@media (max-width: 980px) {
+  .auth-page-v3::before { left: 38%; }
+  .auth-page-v3 .auth-card {
+    width: min(455px, calc(100% - 38px));
+    padding: clamp(27px, 3.2vw, 40px);
   }
-  .auth-page-v3::before{display:none}
-  .auth-page-v3 .auth-card{box-shadow:0 12px 40px rgba(23,44,75,.07)}
 }
-@media(prefers-reduced-motion:reduce){
-  .auth-page-v3::before,.auth-page-v3 .auth-intro{animation:none}
+@media (max-width: 720px) {
+  .auth-page.auth-page-v3 {
+    background: linear-gradient(180deg, #f8fafc, #fff 88%);
+  }
+  .auth-page-v3::before { display: none; }
+  .auth-page-v3 .auth-card {
+    width: min(460px, 100%);
+    padding: clamp(24px, 6vw, 38px);
+    box-shadow: 0 16px 48px rgba(25,45,76,.065);
+  }
+  .auth-page-v3 .auth-creator-credit {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auth-page-v3::before, .auth-page-v3 .auth-intro { animation: none; }
 }
