@@ -1,6 +1,6 @@
 export type Role = 'student' | 'teacher' | 'admin';
 export type LessonStatus = 'scheduled' | 'rescheduled' | 'cancelled' | 'completed';
-export interface Profile { id:string; full_name:string; role:Role; avatar_url:string|null; created_at?:string; }
+export interface Profile { id:string; full_name:string; role:Role; avatar_url:string|null; course:number|null; specialty:string|null; created_at?:string; }
 export interface Group { id:string; name:string; description:string; }
 export interface Membership { id:string; group_id:string; user_id:string; member_role:'student'|'teacher'; }
 export interface Lesson { id:string; title:string; lesson_date:string; day_of_week:number; starts_at:string; ends_at:string; duration_minutes:number; teacher_id:string|null; student_id:string|null; group_id:string|null; room:string; note:string; link:string; materials_url:string; homework:string; status:LessonStatus; created_by:string; created_by_name:string; created_at:string; }
