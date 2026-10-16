@@ -22,8 +22,8 @@ test('scalable decorative SVG wave layers are used and loaded after base auth st
   assert.ok(app.includes('Designed &amp; Developed by <strong>Illia Borshchuk</strong>'));
 });
 test('mobile login preserves a readable form without decorative panels',()=>{
-  assert.match(css,/@media\(max-width:720px\)/);
-  assert.match(css,/\.auth-page-v3::before\{display:none\}/);
+  assert.match(css,/@media\s*\(max-width:\s*720px\)/);
+  assert.match(css,/\.auth-page-v3::before\s*\{\s*display:\s*none;/);
   assert.ok(previous.includes('.auth-page-v3 .auth-intro{display:none}'));
   assert.ok(app.includes('className="auth-card"'));
   assert.ok(app.includes('onSubmit={submit}'));

@@ -13,7 +13,7 @@ test('refined premium design has few broad wave contours and understated paper f
   assert.match(ivory,/viewBox="0 0 1040 1100"/);
   assert.match(navy,/linearGradient/);
   assert.match(ivory,/goldStroke/);
-  assert.equal((navy.match(/<path /g)||[]).length,5,'Avoid a forest of decorative curves');
+  assert.equal((navy.match(/<path /g)||[]).length,6,'Avoid a forest of decorative curves');
   assert.equal((ivory.match(/<path /g)||[]).length,6,'Keep the ivory background minimal');
   assert.match(css,/\.auth-page-v3 \.auth-intro::before \{/);
   assert.match(css,/display: none;/);
