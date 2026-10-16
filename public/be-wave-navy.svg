@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+<defs>
+ <linearGradient id="base" x1="0" y1="0" x2=".92" y2="1"><stop stop-color="#173e64"/><stop offset=".37" stop-color="#0a2a4f"/><stop offset="1" stop-color="#061a36"/></linearGradient>
+ <radialGradient id="shine" cx=".36" cy=".13" r=".81"><stop stop-color="#2b6090" stop-opacity=".44"/><stop offset=".68" stop-color="#0a2344" stop-opacity=".06"/><stop offset="1" stop-color="#071c36" stop-opacity="0"/></radialGradient>
+ <linearGradient id="ribbonA" x1=".2" y1=".22" x2=".84" y2=".88"><stop stop-color="#315f8b" stop-opacity=".72"/><stop offset=".38" stop-color="#1b4776" stop-opacity=".86"/><stop offset=".8" stop-color="#0b294f" stop-opacity=".95"/><stop offset="1" stop-color="#061a36"/></linearGradient>
+ <linearGradient id="ribbonB" x1="0" y1=".1" x2="1" y2=".95"><stop stop-color="#244e7b" stop-opacity=".6"/><stop offset=".5" stop-color="#0f355f"/><stop offset="1" stop-color="#0a2446"/></linearGradient>
+ <linearGradient id="ribbonC" x1="0" y1=".3" x2="1" y2=".9"><stop stop-color="#183c65" stop-opacity=".1"/><stop offset=".62" stop-color="#18416c"/><stop offset="1" stop-color="#071d39"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#d1ad78" stop-opacity="0"/><stop offset=".24" stop-color="#dfc08a" stop-opacity=".83"/><stop offset=".55" stop-color="#d7ae68" stop-opacity=".7"/><stop offset=".95" stop-color="#b78a4e" stop-opacity=".05"/></linearGradient>
+ <linearGradient id="skyline" x1="0" y1="0" x2=".9" y2=".1"><stop stop-color="#70acd7" stop-opacity=".47"/><stop offset=".85" stop-color="#3776a9" stop-opacity=".2"/><stop offset="1" stop-color="#70acd7" stop-opacity="0"/></linearGradient>
+</defs>
+<path fill="url(#base)" d="M0 0H840V1100H0Z"/>
+<path fill="url(#shine)" d="M0 0H840V1100H0Z"/>
+<!-- Primary, layered, vector waves. All edges remain crisp at any resolution. -->
+<path fill="url(#ribbonA)" d="M-160 352C-20 174 161 227 281 342C450 504 554 659 705 640C780 630 850 577 944 546V1100H-160Z"/>
+<path fill="#0d315a" fill-opacity=".72" d="M-125 431C34 250 184 341 301 464C428 599 565 730 702 729C791 728 868 685 958 659V1100H-125Z"/>
+<path fill="url(#ribbonB)" d="M-172 536C25 349 186 433 332 589C468 733 572 807 710 809C800 811 873 775 953 754V1100H-172Z"/>
+<path fill="url(#ribbonC)" d="M-110 768C76 628 252 624 398 729C538 830 676 974 857 909L930 1100H-110Z"/>
+<path fill="#071d39" fill-opacity=".64" d="M-120 889C88 747 253 741 441 861C591 956 717 1042 886 1001V1130H-120Z"/>
+<!-- Thin metallic and light-blue contours, never glowing or blurry -->
+<path d="M-72 316C87 189 195 266 299 361C457 509 569 684 714 663C808 649 877 604 942 576" fill="none" stroke="url(#skyline)" stroke-width="2.2"/>
+<path d="M-132 386C33 248 172 315 304 443C445 580 573 735 709 715C785 705 868 678 916 669" fill="none" stroke="url(#gold)" stroke-width="1.45"/>
+<path d="M-101 463C91 303 235 409 361 543C498 691 592 756 732 764C807 768 871 744 934 725" fill="none" stroke="#3874a5" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M-84 675C90 581 237 589 366 660C524 745 630 880 820 848" fill="none" stroke="url(#gold)" stroke-opacity=".56" stroke-width="1.5"/>
+<path d="M-60 783C140 637 289 695 447 804C583 895 712 972 871 920" fill="none" stroke="#397aaa" stroke-opacity=".3" stroke-width="1.4"/>
+<path d="M-80 964C86 856 233 863 365 927C513 1000 682 1063 871 1023" fill="none" stroke="#2f6a9d" stroke-opacity=".23" stroke-width="1"/>
+</svg>
