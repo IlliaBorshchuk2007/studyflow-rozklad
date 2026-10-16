@@ -1,7 +1,7 @@
 name: Verify StudyFlow
 on:
   push:
-    branches: [main, studyflow-v24-groups-analytics]
+    branches: [main, 'studyflow-v*']
   pull_request:
     branches: [main]
 jobs:

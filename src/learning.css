@@ -1,0 +1,59 @@
+
+/* StudyFlow 2.5 learning controls */
+.learning-view{display:grid;gap:16px}
+.learning-toolbar,.learning-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.learning-toolbar{flex-direction:column;align-items:stretch}
+.learning-row>label{display:grid;gap:5px;flex:1 1 130px}
+.learning-row select,.learning-row input,.learning-toolbar select{min-width:0;flex:1}
+.learning-row h2{margin-right:auto}
+.learning-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.learning-kpis>.panel{display:grid;gap:8px;min-width:0}
+.learning-kpis span{font-size:12px;color:var(--muted)}
+.learning-kpis strong{font-size:25px}
+.learning-confirm{display:flex;align-items:center;gap:9px;background:#dff9ec;padding:12px;border-radius:9px;color:#197344;font-size:13px}
+.learning-alert{padding:12px}
+.learning-danger{color:#ba3857}
+.attendance-table{display:grid;gap:8px;margin-top:14px}
+.attendance-person{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px}
+.attendance-person span{display:grid;gap:4px}
+.attendance-person small{color:var(--muted)}
+.attendance-actions{display:flex;gap:6px;flex-wrap:wrap}
+.attendance-pill{cursor:pointer;border:1px solid var(--line);background:transparent;color:inherit;border-radius:9px;padding:8px 10px;font-size:12px}
+.attendance-pill.selected{border-width:2px;font-weight:700}
+.attendance-pill.present.selected{background:#d6f6e7;color:#12694c}
+.attendance-pill.absent.selected{background:#fbe0e3;color:#af344e}
+.attendance-pill.late.selected{background:#fff2d1;color:#926515}
+.request-card{padding:16px;border:1px solid var(--line);border-radius:13px;display:grid;gap:7px;margin-top:10px}
+.request-card p{white-space:pre-wrap;margin:5px 0;font-size:13px}
+.request-card small{color:var(--muted)}
+.request-status{border-radius:15px;padding:5px 9px;font-size:11px}
+.request-status.pending{background:#fff1cf;color:#9d6c10}
+.request-status.approved{background:#daf5e6;color:#167449}
+.request-status.rejected{background:#fbe1e4;color:#af3758}
+.request-dates{display:flex;gap:7px;align-items:center;font-size:12px;flex-wrap:wrap}
+.request-decide{display:flex;gap:9px;align-items:end;flex-wrap:wrap;margin-top:10px}
+.request-decide label{display:grid;gap:5px;flex:1 1 180px}
+.repeat-editor{display:flex;flex-wrap:wrap;gap:12px;align-items:end;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(90,125,245,.06)}
+.repeat-editor label{display:grid;gap:5px;min-width:160px;flex:1 1 180px}
+.repeat-editor p{margin:2px 0;font-size:12px;line-height:1.6}
+.repeat-days{display:flex;gap:12px;flex-wrap:wrap}
+.repeat-days label{display:flex;align-items:center;gap:5px;min-width:0;flex:0 0 auto;font-size:12px}
+.repeat-days input{width:15px;height:15px}
+.learning-transfer{display:grid;gap:10px;padding:16px}
+.learning-transfer label{display:grid;gap:5px}
+.learning-transfer p{font-size:12px}
+.lesson[draggable="true"]{cursor:grab}
+.day-content{min-height:90px}
+@media(max-width:650px){.learning-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.attendance-person{align-items:flex-start;flex-direction:column}.request-decide>*{flex:1 1 100%}.repeat-editor label{flex:1 1 100%}}
+
+.invite-manager{display:grid;gap:13px}
+.invite-manager h3{display:flex;align-items:center;gap:9px;margin:0}
+.invite-manager p{font-size:12px;line-height:1.6}
+.invite-created{display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:12px;border-radius:12px;border:1px solid #a6be80;background:rgba(130,185,85,.1)}
+.invite-created strong{width:100%;font-size:12px}
+.invite-created input{flex:1 1 190px;min-width:0}
+.invite-entry{display:flex;gap:11px;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:12px;flex-wrap:wrap}
+.invite-banner{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin-bottom:15px}
+.invite-banner>p{width:100%;margin:0;font-size:12px}
+.invite-banner>strong{width:100%}
+@media(max-width:500px){.invite-entry>*{width:100%}.invite-created input{width:100%}}

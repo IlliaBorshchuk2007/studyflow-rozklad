@@ -3,6 +3,7 @@ import {Check,ChevronLeft,ChevronRight,Filter,Plus,Search,Trash2,X} from 'lucide
 import {supabase} from './lib/supabase.ts';
 import {ROLE_LABEL,type Group,type Membership,type Profile,type Role,type UserRow} from './lib/types.ts';
 import './dashboard.css';
+import GroupInvitations from './GroupInvitations.tsx';
 
 type Person=Profile&{email:string};
 const PAGE_SIZE=40;
@@ -70,6 +71,7 @@ export default function GroupManager({groups,members,profiles,users,role,onRefre
     {review&&selected.length>0&&<div className="gmanager-preview"><h3>Підтвердження · {selected.length}</h3><p>Група: <strong>{selectedGroup?.name}</strong>. Студенти додаються як студенти, викладачі — як викладачі.</p><div className="gmanager-chosen">{selectedPeople.map(p=><span key={p.id}>{p.full_name}<button onClick={()=>toggle(p.id)} title="Прибрати"><X size={12}/></button></span>)}</div><button className="btn primary" disabled={busy} onClick={()=>void assignAll()}>{busy?'Збереження…':'Підтвердити призначення'}</button></div>}
     {status&&<div role="alert" className="message error">{status}</div>}
    </div>}
+   {admin&&groupId&&<div className="panel"><GroupInvitations groupId={groupId}/></div>}
   </div>
  </div></section>;
 }
