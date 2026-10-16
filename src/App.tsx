@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react';
 import type { Session } from '@supabase/supabase-js';
-import { ArrowLeft, ArrowRight, Bell, BookOpenText, CalendarDays, CalendarRange, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Copy, Download, FileClock, GraduationCap, LayoutGrid, Link2, LogOut, Moon, Pencil, Plus, Printer, RefreshCw, Save, Search, ShieldCheck, Sun, Trash2, UserRound, UsersRound, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bell, BookOpenText, CalendarDays, CalendarRange, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Copy, Download, FileClock, LayoutGrid, Link2, LogOut, Moon, Pencil, Plus, Printer, RefreshCw, Save, Search, ShieldCheck, Sun, Trash2, UserRound, UsersRound, X } from 'lucide-react';
 import { isConfigured, supabase } from './lib/supabase.ts';
 import { addDays, addMonths, calcDuration, dayOfWeek, DAYS, durationText, kyivToday, monthCells, monthStart, parseISO, safeLink, SHORT_DAYS, showDate, weekDays } from './lib/calendar.ts';
 import { ROLE_LABEL, STATUS_LABEL, type AuditEntry, type Group, type Lesson, type LessonPayload, type Membership, type Notice, type Profile, type Role, type UserRow, type Assignment, type RescheduleEvent } from './lib/types.ts';
